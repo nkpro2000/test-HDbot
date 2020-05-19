@@ -150,7 +150,7 @@ if __name__ == "__main__":
         return os.popen(args[0]).read()
     @key('!exit')
     def Exit(*args,msg):
-        exit()
+        sys.exit(0)
 
     client.event(Manager(key.P2F).on_message)
     client.run(os.environ['DBToken'])
